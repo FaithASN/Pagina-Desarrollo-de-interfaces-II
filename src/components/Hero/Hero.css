@@ -73,6 +73,12 @@
 
     font-size:18px;
 
+    color:#111;
+
+    text-decoration:none;
+
+    display:inline-block;
+
 }
 
 .btn-secondary{
@@ -90,5 +96,7 @@
     font-size:18px;
 
     backdrop-filter:blur(8px);
+
+    text-decoration:none;
 
 }

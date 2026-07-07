@@ -68,6 +68,10 @@
 
     transition:.3s;
 
+    color:#111;
+
+    text-decoration:none;
+
 }
 
 .reserve-btn:hover{

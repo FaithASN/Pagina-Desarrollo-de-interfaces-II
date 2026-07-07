@@ -3,14 +3,9 @@ import hero from "../../assets/images/hero.png";
 
 function Hero() {
   return (
-    <section
-      className="hero"
-      style={{ backgroundImage: `url(${hero})` }}
-    >
+    <section className="hero" style={{ backgroundImage: `url(${hero})` }}>
       <div className="hero-overlay">
-
         <div className="hero-content">
-
           <h1>
             Sabores que
             <br />
@@ -18,25 +13,21 @@ function Hero() {
           </h1>
 
           <p>
-            Una experiencia gastronómica única donde
+            Una experiencia gastronomica unica donde
             <br />
-            la pasión por la cocina se convierte en arte.
+            la pasion por la cocina se convierte en arte.
           </p>
 
           <div className="hero-buttons">
-
-            <button className="btn-primary">
+            <a className="btn-primary" href="#/reservas">
               Reservar ahora
-            </button>
+            </a>
 
-            <button className="btn-secondary">
-              Ver menú
-            </button>
-
+            <a className="btn-secondary" href="#menu">
+              Ver menu
+            </a>
           </div>
-
         </div>
-
       </div>
     </section>
   );

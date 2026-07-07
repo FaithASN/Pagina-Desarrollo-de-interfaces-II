@@ -1,0 +1,181 @@
+.reservation-form-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(420px, 55%) minmax(360px, 45%);
+    background: #242323;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.form-side {
+    padding: 28px 42px 42px;
+}
+
+.reservation-form-page .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #d7d7d7;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.reservation-form {
+    width: min(390px, 100%);
+    margin: 74px 0 0 28px;
+}
+
+.form-heading {
+    margin-bottom: 22px;
+}
+
+.form-heading h1 {
+    margin: 0 0 6px;
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.form-heading p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: start;
+    gap: 14px;
+    margin-bottom: 14px;
+    color: #f0f0f0;
+    font-size: 14px;
+}
+
+.field-row svg {
+    margin-top: 18px;
+    color: #a7a7a7;
+    font-size: 23px;
+}
+
+.field-row span,
+.comment-field {
+    display: grid;
+    gap: 6px;
+}
+
+.field-row input,
+.field-row select,
+.comment-field textarea {
+    width: 100%;
+    min-height: 36px;
+    background: #4b4041;
+    border: 1px solid transparent;
+    color: white;
+    box-sizing: border-box;
+    padding: 0 12px;
+    font: inherit;
+    outline: none;
+}
+
+.field-row input:focus,
+.field-row select:focus,
+.comment-field textarea:focus {
+    border-color: #c5d86d;
+    background: #554849;
+}
+
+.field-row input::placeholder,
+.comment-field textarea::placeholder {
+    color: #8f8586;
+}
+
+.field-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.field-row.compact {
+    grid-template-columns: 30px 1fr;
+}
+
+.people-field {
+    width: 250px;
+}
+
+.comment-field {
+    margin: 10px 0 34px 30px;
+    color: #f0f0f0;
+    font-size: 14px;
+}
+
+.comment-field textarea {
+    min-height: 38px;
+    resize: vertical;
+}
+
+.submit-reservation {
+    display: block;
+    width: 280px;
+    min-height: 58px;
+    margin-left: 30px;
+    background: #b7c86a;
+    border: none;
+    color: #1a1a1a;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.submit-reservation:hover {
+    background: #c8db73;
+}
+
+.success-message {
+    margin: 18px 0 0 30px;
+    color: #d9eb60;
+    line-height: 1.5;
+}
+
+.form-image {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 900px) {
+    .reservation-form-page {
+        grid-template-columns: 1fr;
+    }
+
+    .form-side {
+        padding: 24px;
+    }
+
+    .reservation-form {
+        margin: 50px auto 0;
+    }
+
+    .form-image {
+        min-height: 320px;
+        order: -1;
+    }
+}
+
+@media (max-width: 520px) {
+    .field-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .people-field,
+    .submit-reservation {
+        width: 100%;
+    }
+
+    .comment-field,
+    .submit-reservation,
+    .success-message {
+        margin-left: 0;
+    }
+}

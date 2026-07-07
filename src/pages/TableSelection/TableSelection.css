@@ -1,0 +1,301 @@
+.table-page {
+    min-height: 100vh;
+    background: #242323;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 58px 80px 40px;
+}
+
+.table-page .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #d7d7d7;
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 50px;
+}
+
+.table-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 0 auto 18px;
+}
+
+.table-header h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.table-header p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.table-legend {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    padding-top: 14px;
+    font-size: 13px;
+}
+
+.table-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.table-legend i {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.table-legend .available {
+    background: #6ba364;
+}
+
+.table-legend .selected {
+    background: #a5bb18;
+}
+
+.table-legend .occupied {
+    background: #e8e8e8;
+}
+
+.floor-plan {
+    position: relative;
+    width: min(900px, 100%);
+    height: 530px;
+    margin: 0 auto 40px;
+    background: #2e2929;
+}
+
+.corner {
+    position: absolute;
+    width: 92px;
+    height: 28px;
+}
+
+.corner::before,
+.corner::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 70px;
+    background: #9d8b3d;
+}
+
+.corner::before {
+    transform: rotate(18deg);
+}
+
+.corner::after {
+    transform: rotate(-18deg);
+}
+
+.corner-top-left {
+    left: -48px;
+    top: -24px;
+}
+
+.corner-top-right {
+    right: -48px;
+    top: -24px;
+}
+
+.corner-bottom-left {
+    left: -48px;
+    bottom: -6px;
+}
+
+.corner-bottom-right {
+    right: -48px;
+    bottom: -6px;
+}
+
+.restaurant-table {
+    position: absolute;
+    width: 126px;
+    height: 90px;
+    border: none;
+    background: #6ba364;
+    color: #244123;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.restaurant-table:hover:not(:disabled) {
+    outline: 3px solid #c5d86d;
+}
+
+.restaurant-table.seleccionada {
+    background: #a5bb18;
+    color: #2d320f;
+}
+
+.restaurant-table.ocupada {
+    background: #e8e8e8;
+    color: #777;
+    cursor: not-allowed;
+}
+
+.chair {
+    position: absolute;
+    width: 24px;
+    height: 13px;
+    border-radius: 10px;
+    background: #e5e5e5;
+}
+
+.chair-top-left {
+    top: -15px;
+    left: 18px;
+}
+
+.chair-top-right {
+    top: -15px;
+    right: 18px;
+}
+
+.chair-bottom-left {
+    bottom: -15px;
+    left: 18px;
+}
+
+.chair-bottom-right {
+    bottom: -15px;
+    right: 18px;
+}
+
+.chair-left {
+    top: 38px;
+    left: -14px;
+    transform: rotate(90deg);
+}
+
+.chair-right {
+    top: 38px;
+    right: -14px;
+    transform: rotate(90deg);
+}
+
+.table-1 {
+    left: 42px;
+    top: 40px;
+}
+
+.table-2 {
+    left: 290px;
+    top: 40px;
+}
+
+.table-3 {
+    left: 495px;
+    top: 40px;
+}
+
+.table-4 {
+    right: 58px;
+    top: 40px;
+}
+
+.table-5 {
+    left: 42px;
+    top: 222px;
+}
+
+.table-6 {
+    right: 58px;
+    top: 222px;
+}
+
+.table-7 {
+    left: 42px;
+    bottom: 42px;
+}
+
+.table-8 {
+    left: 290px;
+    bottom: 42px;
+}
+
+.table-9 {
+    left: 520px;
+    bottom: 42px;
+}
+
+.table-10 {
+    right: 58px;
+    bottom: 42px;
+}
+
+.bar {
+    position: absolute;
+    left: 275px;
+    top: 205px;
+    width: 360px;
+    height: 110px;
+    background: #704f4f;
+    color: #473839;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    font-size: 36px;
+}
+
+.bar svg {
+    color: #1f1f1f;
+    font-size: 28px;
+}
+
+.confirm-table {
+    display: block;
+    min-width: 430px;
+    min-height: 62px;
+    margin: 0 auto;
+    border: none;
+    background: #aebd61;
+    color: #434337;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.confirm-table:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.table-hint {
+    margin: 16px auto 0;
+    max-width: 520px;
+    color: #d9d9d9;
+    text-align: center;
+    line-height: 1.5;
+}
+
+@media (max-width: 980px) {
+    .table-page {
+        padding: 32px 24px;
+        overflow-x: auto;
+    }
+
+    .table-header,
+    .floor-plan {
+        min-width: 900px;
+    }
+
+    .confirm-table {
+        min-width: 0;
+        width: min(430px, 100%);
+    }
+}
