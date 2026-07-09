@@ -14,8 +14,25 @@ const initialForm = {
   comment: "",
 };
 
+function getEditReservation() {
+  const stored = localStorage.getItem("reservationToEdit");
+
+  if (!stored) {
+    return initialForm;
+  }
+
+  try {
+    return {
+      ...initialForm,
+      ...JSON.parse(stored),
+    };
+  } catch {
+    return initialForm;
+  }
+}
+
 function ReservationForm() {
-  const [form, setForm] = useState(initialForm);
+  const [form, setForm] = useState(getEditReservation);
   const [message, setMessage] = useState("");
 
   const handleChange = (event) => {
@@ -29,6 +46,7 @@ function ReservationForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     localStorage.setItem("reservationData", JSON.stringify(form));
+    localStorage.removeItem("reservationToEdit");
     setMessage(`Reserva registrada para ${form.name} el ${form.date} a las ${form.time}.`);
     setForm(initialForm);
     window.location.hash = "#/mesa";

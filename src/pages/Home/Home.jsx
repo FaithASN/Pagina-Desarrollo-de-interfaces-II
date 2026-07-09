@@ -1,6 +1,9 @@
 import Navbar from "../../components/Navbar/Navbar";
 import Hero from "../../components/Hero/Hero";
 import Features from "../../components/Features/Features";
+import pastaImage from "../../assets/images/Pasta.png";
+import risottoImage from "../../assets/images/Risotto.png";
+import postreImage from "../../assets/images/Postre.png";
 import "./Home.css";
 
 function Home() {
@@ -16,14 +19,17 @@ function Home() {
           <h2>Platos destacados</h2>
           <div className="menu-grid">
             <article>
+              <img src={pastaImage} alt="Pasta artesanal" />
               <h3>Pasta artesanal</h3>
               <p>Salsa cremosa, hierbas frescas y queso madurado.</p>
             </article>
             <article>
+              <img src={risottoImage} alt="Risotto de la casa" />
               <h3>Risotto de la casa</h3>
               <p>Arroz suave, vegetales salteados y aroma de vino blanco.</p>
             </article>
             <article>
+              <img src={postreImage} alt="Postre de temporada" />
               <h3>Postre de temporada</h3>
               <p>Una opcion dulce para cerrar la experiencia.</p>
             </article>

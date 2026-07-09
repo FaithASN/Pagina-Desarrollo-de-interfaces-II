@@ -23,7 +23,7 @@
 .reservas-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 34px;
 }
 
@@ -31,7 +31,45 @@
     font-size: 38px;
     line-height: 1;
     font-weight: 500;
-    margin: 0 0 18px;
+    margin: 0;
+}
+
+.reservas-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.busqueda-fecha {
+    display: flex;
+    align-items: flex-end;
+}
+
+.busqueda-fecha label {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #d7d7d7;
+    font-size: 14px;
+}
+
+.busqueda-fecha input {
+    background: #1e1e1e;
+    border: 1px solid #494949;
+    padding: 10px 12px;
+    color: #f4f4f4;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.fecha-actual {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #d7d7d7;
+    font-size: 14px;
 }
 
 .reservas .btn-primary {
@@ -74,6 +112,21 @@
     color: white;
     cursor: pointer;
     font-size: 15px;
+}
+
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 14px;
+}
+
+.table-scroll::-webkit-scrollbar {
+    height: 10px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    background: rgba(197, 216, 109, 0.7);
+    border-radius: 10px;
 }
 
 .filtros .active {
@@ -148,19 +201,51 @@
 @media (max-width: 800px) {
     .reservas {
         padding: 24px;
-        overflow-x: auto;
+        overflow-x: hidden;
     }
 
     .reservas-header {
-        gap: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .reservas-header-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .busqueda-fecha,
+    .fecha-actual {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .filtros {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .filtros button {
+        min-height: 50px;
+    }
+
+    .tabla {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .tabla th,
+    .tabla td {
+        padding: 12px 14px;
+    }
+
+    .acciones {
+        gap: 12px;
     }
 
     .reservas-header h1 {
         font-size: 30px;
-    }
-
-    .filtros,
-    .tabla {
-        min-width: 760px;
     }
 }

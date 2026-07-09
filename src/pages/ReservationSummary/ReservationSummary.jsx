@@ -1,23 +1,29 @@
 import { FiArrowLeft, FiCalendar, FiClock, FiMail, FiPhone, FiUser } from "react-icons/fi";
 import { MdOutlineTableRestaurant } from "react-icons/md";
 import hero from "../../assets/images/hero.png";
+import pastaImage from "../../assets/images/Pasta.png";
+import risottoImage from "../../assets/images/Risotto.png";
+import postreImage from "../../assets/images/Postre.png";
 import "./ReservationSummary.css";
 
 const bestSellers = [
   {
-    name: "Bruschetta Clasica",
+    name: "Pasta artesanal",
     category: "Entrada",
-    description: "Pan tostado con tomate, albahaca, ajo y aceite de oliva.",
+    description: "Salsa cremosa, hierbas frescas y queso madurado.",
+    image: pastaImage,
   },
   {
-    name: "Ensalada Mediterranea",
-    category: "Entrada",
-    description: "Lechugas, tomates cherry, aceitunas, queso feta y aderezo de la casa.",
+    name: "Risotto de la casa",
+    category: "Plato Principal",
+    description: "Arroz suave, vegetales salteados y aroma de vino blanco.",
+    image: risottoImage,
   },
   {
-    name: "Sopa del dia",
+    name: "Postre de temporada",
     category: "Especial",
-    description: "Preparacion caliente de temporada recomendada por el chef.",
+    description: "Una opcion dulce para cerrar la experiencia.",
+    image: postreImage,
   },
 ];
 
@@ -102,7 +108,7 @@ function ReservationSummary() {
             <article className="dish-card" key={dish.name}>
               <div
                 className={`dish-image dish-image-${index + 1}`}
-                style={{ backgroundImage: `url(${hero})` }}
+                style={{ backgroundImage: `url(${dish.image})` }}
               />
               <div>
                 <span>{dish.category}</span>

@@ -115,20 +115,22 @@
 .dish-image {
     width: 150px;
     aspect-ratio: 1.25;
-    background-size: 340%;
+    background-size: cover;
     background-position: center;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 .dish-image-1 {
-    background-position: 24% 42%;
+    background-position: center;
 }
 
 .dish-image-2 {
-    background-position: 60% 40%;
+    background-position: center;
 }
 
 .dish-image-3 {
-    background-position: 44% 72%;
+    background-position: center;
 }
 
 .dish-card span {

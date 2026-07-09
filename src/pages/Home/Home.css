@@ -40,6 +40,15 @@ html {
     background: white;
     border: 1px solid #e8e0d4;
     padding: 28px;
+    display: grid;
+    gap: 18px;
+}
+
+.menu-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
 }
 
 .menu-grid h3 {
@@ -62,5 +71,28 @@ html {
 
     .home-section h2 {
         font-size: 32px;
+    }
+}
+
+@media (max-width: 520px) {
+    .home-section {
+        padding: 40px 16px;
+    }
+
+    .menu-grid article {
+        padding: 20px;
+    }
+
+    .home-section p {
+        font-size: 16px;
+    }
+
+    .section-label {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .menu-grid {
+        gap: 16px;
     }
 }

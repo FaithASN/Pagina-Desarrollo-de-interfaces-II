@@ -100,3 +100,42 @@
     text-decoration:none;
 
 }
+
+@media (max-width: 900px) {
+    .hero {
+        min-height: auto;
+        height: auto;
+    }
+
+    .hero-overlay {
+        align-items: flex-start;
+        padding: 34px 18px;
+    }
+
+    .hero-content {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        padding: 16px 18px;
+    }
+}
+
